@@ -15,7 +15,7 @@
     margin-top: 30px;
     text-align: center;
     animation-name: transition;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 h1 {
@@ -31,6 +31,8 @@ form {
     align-items: center;
     background-color: #d1c9c9;
     box-shadow: 10px 10px 8px #888888;
+    min-width: 300px;
+    width: 80%;
     max-width: 500px;
     border-radius: 10px;
     height: 250px;
