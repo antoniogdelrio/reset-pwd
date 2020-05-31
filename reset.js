@@ -1,8 +1,6 @@
+require('dotenv').config()
 const { Builder, By} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-const path = require('chromedriver').path;
-const service = new chrome.ServiceBuilder(path).build();
-chrome.setDefaultService(service);
+const {CPF_ASI, PASSWORD_ASI} = process.env;
 
 module.exports = function(cpf, birthday, newPWD){
     function globalErrorHandler(reject){
@@ -31,8 +29,8 @@ module.exports = function(cpf, birthday, newPWD){
             driver.findElements(By.className('form-control ng-pristine ng-valid'))
                 .then(inputs => {
                     driver.sleep(2000);
-                    inputs[0].sendKeys('33855622876');
-                    inputs[1].sendKeys('Leo@1234');
+                    inputs[0].sendKeys(CPF_ASI);
+                    inputs[1].sendKeys(PASSWORD_ASI);
                     driver.findElement(By.className('btn-padrao'))
                         .then(btn => {
                             btn.click();
@@ -50,12 +48,12 @@ module.exports = function(cpf, birthday, newPWD){
                 })
                 .catch(() => globalErrorHandler(reject))
         
-            await driver.sleep(2000);
+            await driver.sleep(6000);
             if(adminLoginOk){
                     //Script para entrar no reset de senha
                 driver.executeScript('showReiniciarSenha()');
             
-                await driver.sleep(2000);
+                await driver.sleep(6000);
             
                 //Digitação do CPF do aluno
                 driver.findElement(By.id('txtCPFReiniciarSenha'))
