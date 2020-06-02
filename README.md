@@ -3,7 +3,7 @@ Bot implementation for fast and automatic students password reset, using Express
 
 ## Usage
 Create a .env file inside the src directory and fill the enviroment variables wity your informations, following the structure of the .env.example file.
-Open the project directory on terminal and type "npm install". Next, type "npm start" and open "localhost:8080" on browser.
+Open the project directory on terminal and type "npm install". Next, type "npm start" and open "localhost:8000" on browser.
 
 In case of problems related with ChromeDriver install, I suggest follow the steps provided by the links:
 
