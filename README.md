@@ -1,4 +1,4 @@
-# Reset Password Bot - Portal Educacional SESI/SENAI
+# Reset Password Bot - Portal Educacional SESI/SENAI :key:
 Bot implementation for fast and automatic students password reset, using Express and Selenium WebDriver.
 
 ## Usage
